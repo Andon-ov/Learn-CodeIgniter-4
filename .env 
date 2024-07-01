@@ -40,11 +40,11 @@ CI_ENVIRONMENT = development
 # database.default.port = 3306
 
 database.default.hostname = 127.0.0.1
-database.default.database = codeigniter_db
-database.default.username = codeigniter_user
-database.default.password = mysecretpassword
-database.default.DBDriver = Postgre
-database.default.port = 5432
+database.default.database = mydatabase
+database.default.username = myuser
+database.default.password = mypassword
+database.default.DBDriver = MySQLi
+database.default.port = 3306
 
 
 # If you use MySQLi as tests, first update the values of Config\Database::$tests.

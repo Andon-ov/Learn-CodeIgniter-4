@@ -25,30 +25,24 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public $default = [
-        'DSN'         => '',
-        'hostname'    => '127.0.0.1',
-        'username'    => 'codeigniter_user',
-        'password'    => 'mysecretpassword',
-        'database'    => 'codeigniter_db',
-        'DBDriver'    => 'Postgre',
-        'DBPrefix'    => '',
-        'pConnect'    => false,
-        'DBDebug'     => (ENVIRONMENT !== 'production'),
-        'charset'     => 'UTF8',
-        'DBCollat'    => 'utf8_general_ci',
-        'swapPre'     => '',
-        'encrypt'     => false,
-        'compress'    => false,
-        'strictOn'    => false,
-        'failover'    => [],
-        'port'        => 5432,
-        'number'      => '',
-        'connect'     => true,
-        'timeout'     => 0,
-        'socket'      => '',
+        'DSN'      => '',
+        'hostname' => '127.0.0.1',
+        'username' => 'myuser',
+        'password' => 'mypassword',
+        'database' => 'mydatabase',
+        'DBDriver' => 'MySQLi',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 3306,
     ];
-    
-    
 
 
     //    /**
