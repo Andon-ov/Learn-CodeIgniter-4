@@ -72,7 +72,10 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 <!-- Docker command -->
 docker run --name my_mysql_db -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=mydatabase -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypassword -p 3306:3306 -d mysql:latest
 
+sudo docker run --name my_mysql_db --network host -e MYSQL_ROOT_PASSWORD=rootpassword -e MYSQL_DATABASE=mydatabase -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypassword -d mysql:latest
+
+docker network create my_network
+
 Open the php.ini file (usually found in /etc/php/php.ini) and make sure there is a line:
 extension=mysqli
 
-docker network create my_network
