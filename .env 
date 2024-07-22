@@ -39,7 +39,7 @@ CI_ENVIRONMENT = development
 # database.default.DBPrefix =
 # database.default.port = 3306
 
-database.default.hostname = my-mysql
+database.default.hostname = 127.0.0.1
 database.default.database = mydatabase
 database.default.username = myuser
 database.default.password = mypassword

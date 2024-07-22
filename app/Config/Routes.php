@@ -6,4 +6,4 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/test-db', 'TestDB::index');
+$routes->get('/test-db', 'TestDB::index'); 
