@@ -7,3 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/test-db', 'TestDB::index'); 
+
+
+
+
+// If you want to enable auto-routing, you need to add this line
+$routes->setAutoRoute(true);
