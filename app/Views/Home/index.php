@@ -1,5 +1,8 @@
+<?= $this->extend("layouts/default") ?>
 
-    <h1>Welcome</h1>
-</body>
+<?= $this->section("content") ?>
 
-</html>
+<h1>Welcome</h1>
+
+
+<?= $this->endSection() ?>
