@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): void
+    public function index(): string
     {
 
         // returning layout view
-        echo view("Home/index.php");
+        return view("Home/index");
     }
 }
 

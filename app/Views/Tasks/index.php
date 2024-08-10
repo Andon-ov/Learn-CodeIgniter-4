@@ -1,8 +1,21 @@
-<!-- including View Partials -->
+<?= $this->extend("layouts/default") ?>
 
-<?= $this->include('header') ?>
+<?= $this->section("title") ?> Tasks <?= $this->endSection(); ?>
+
+
+<?= $this->section("content") ?>
 
 <h1>Tasks</h1>
-</body>
 
-</html>
+<ul>
+    <?php foreach ($tasks as $task): ?>
+        <li>
+            <?= $task['id'] ?>
+            <?= $task['description'] ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+
+
+<?= $this->endSection() ?>
