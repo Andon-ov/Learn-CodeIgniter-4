@@ -76,3 +76,7 @@ docker network create my_network
 
 Open the php.ini file (usually found in /etc/php/php.ini) and make sure there is a line:
 extension=mysqli 
+
+composer install
+
+ php spark migrate
