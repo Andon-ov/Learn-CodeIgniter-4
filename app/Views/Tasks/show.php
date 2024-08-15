@@ -6,6 +6,7 @@
 <?= $this->section("content") ?>
 
 <h1>Tasks</h1>
+<a href=" <?= site_url("/tasks") ?> ">&laquo; back to index</a>
 
 <dl>
     <dt>ID</dt>
