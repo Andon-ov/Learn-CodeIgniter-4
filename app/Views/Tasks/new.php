@@ -5,6 +5,18 @@
 
 <?= $this->section("content") ?>
 
+<?php if (session()->has('errors')): ?>
+    <ul>
+        <?php foreach (session('errors') as $error): ?>
+            <li>
+                <?= $error ?>
+            </li>
+
+        <?php endforeach ?>
+    </ul>
+<?php endif ?>
+
+
 <h1>New Task</h1>
 
 <!-- <form method="post" action="/tasks/create">-->

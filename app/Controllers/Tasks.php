@@ -39,10 +39,11 @@ class Tasks extends BaseController
         $result = $model->insert(['description' => $this->request->getPost("description")]);
 
         if ($result === false) {
-            dd($model->errors());
+            return redirect()->back()
+                ->with('errors', $model->errors());
         } else {
 
-            dd($model->insertID);
+            return redirect()->to("/tasks/show/$result");
         }
     }
 }
