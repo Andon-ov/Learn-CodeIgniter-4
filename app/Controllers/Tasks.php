@@ -40,10 +40,34 @@ class Tasks extends BaseController
 
         if ($result === false) {
             return redirect()->back()
-                ->with('errors', $model->errors());
+                ->with('errors', $model->errors())
+                ->with('warning', 'Invalid data');
         } else {
 
-            return redirect()->to("/tasks/show/$result");
+            return redirect()->to("/tasks/show/$result")
+                ->with('info', 'Task created successfully');
         }
+    }
+
+    public function edit($id)
+    {
+        $model = new \App\Models\TaskModel;
+
+        $task = $model->find($id);
+
+        return view('Tasks/edit', [
+            'task' => $task
+        ]);
+    }
+
+    public function update($id)
+    {
+
+        $model = new \App\Models\TaskModel;
+
+        $model->update($id, ['description' => $this->request->getPost("description")]);
+
+        return redirect()->to("/tasks/show/$id")
+            ->with('info', 'Task update successfully');
     }
 }
